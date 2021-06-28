@@ -1,0 +1,116 @@
+.Header {
+    inline-size: 100%;
+    // block-size: 70px;
+    display: flex;
+    justify-content: space-between;
+    background: #fff;
+    align-content: center;   
+    align-items: center;
+    z-index: 1000;
+    position: fixed;
+    top: 0;
+    left: 0;
+
+    &__title {
+        margin-inline-start: 21px;
+        font-size: 1.4rem;
+        inline-size: 160px;
+        
+        p {
+            margin-block-start: 0px;
+            margin-block-end: 0px;
+            white-space: nowrap;
+            margin-block-start: 0;
+            
+            a {
+                display: flex;
+                line-height: 1.3;
+                font-weight: 900;
+                // block-size: 70px;
+                align-items: center;
+                color: rgb(19, 29, 52);
+                img {
+                    block-size: 33px;
+                    inline-size: auto;       
+                }
+            }
+            span {
+                white-space: nowrap;
+                margin-inline-start: 16px;
+                font-size: 1.4rem;
+                
+                b{
+                    font-size: 1.8rem;
+                }
+            }
+        }
+    }
+
+    &__link {
+        font-weight: 700;
+        .menu {
+            margin: 0 auto;
+            block-size: 70px;
+            display: flex;
+            
+            li {
+                list-style: none;
+                position: relative;
+                a {
+                    block-size: 70px;
+                    line-height: 70px;
+                    padding: 0 15px;
+                    font-size: 1.6rem;
+                    text-align: center;
+                    color: rgb(19, 29, 52);
+                    display: block;
+
+                    &:hover {
+                        color: #131d34;
+                        background-color: #d4f1f8;
+                    }
+                }
+                li {
+                    height: 0;
+                    overflow: hidden;
+                    transition: 0.3s;
+                    
+                }
+                &:hover {
+                    > ul {
+                        > li {
+                            height: 70px;
+                            overflow: visible;
+                            // width: 100%;
+                        }
+                    }
+                }
+                .sub-menu {
+                    left: 0%;
+                    position: absolute;
+                    z-index: 1000;
+                    white-space: nowrap;
+                    li {
+                        text-align: left;
+                        display: flex;
+                        font-size: 1.6rem;
+                        font-weight: 400;
+                        background-color: #e9f8fb;
+                        a {
+                            padding: 15 60 15 15px;
+                            font-size: 1.6rem;
+                            // color: rgb(19, 29, 52);
+                        }
+                    }
+                }
+            }    
+            
+            .menu-item {
+                a {
+                    color: #fff;
+                    background-color: #2498b3;
+                }        
+            }
+        }
+    }
+}

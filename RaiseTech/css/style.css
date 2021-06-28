@@ -1,0 +1,226 @@
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+* {
+  list-style-type: none;
+  text-decoration: none;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  font-size: 62.5%;
+}
+
+body {
+  font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
+  line-height: 1.7;
+  font-size: 1.6rem;
+  color: #121212;
+}
+
+.Header {
+  inline-size: 100%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  background: #fff;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  z-index: 1000;
+  position: fixed;
+  top: 0;
+  left: 0;
+}
+
+.Header__title {
+  -webkit-margin-start: 21px;
+          margin-inline-start: 21px;
+  font-size: 1.4rem;
+  inline-size: 160px;
+}
+
+.Header__title p {
+  -webkit-margin-before: 0px;
+          margin-block-start: 0px;
+  -webkit-margin-after: 0px;
+          margin-block-end: 0px;
+  white-space: nowrap;
+  -webkit-margin-before: 0;
+          margin-block-start: 0;
+}
+
+.Header__title p a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  line-height: 1.3;
+  font-weight: 900;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #131d34;
+}
+
+.Header__title p a img {
+  block-size: 33px;
+  inline-size: auto;
+}
+
+.Header__title p span {
+  white-space: nowrap;
+  -webkit-margin-start: 16px;
+          margin-inline-start: 16px;
+  font-size: 1.4rem;
+}
+
+.Header__title p span b {
+  font-size: 1.8rem;
+}
+
+.Header__link {
+  font-weight: 700;
+}
+
+.Header__link .menu {
+  margin: 0 auto;
+  block-size: 70px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.Header__link .menu li {
+  list-style: none;
+  position: relative;
+}
+
+.Header__link .menu li a {
+  block-size: 70px;
+  line-height: 70px;
+  padding: 0 15px;
+  font-size: 1.6rem;
+  text-align: center;
+  color: #131d34;
+  display: block;
+}
+
+.Header__link .menu li a:hover {
+  color: #131d34;
+  background-color: #d4f1f8;
+}
+
+.Header__link .menu li li {
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.Header__link .menu li:hover > ul > li {
+  height: 70px;
+  overflow: visible;
+}
+
+.Header__link .menu li .sub-menu {
+  left: 0%;
+  position: absolute;
+  z-index: 1000;
+  white-space: nowrap;
+}
+
+.Header__link .menu li .sub-menu li {
+  text-align: left;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  font-size: 1.6rem;
+  font-weight: 400;
+  background-color: #e9f8fb;
+}
+
+.Header__link .menu li .sub-menu li a {
+  padding: 15 60 15 15px;
+  font-size: 1.6rem;
+}
+
+.Header__link .menu .menu-item a {
+  color: #fff;
+  background-color: #2498b3;
+}
+
+.Main {
+  -webkit-padding-before: 70px;
+          padding-block-start: 70px;
+}
+
+.Main .TopHead {
+  position: relative;
+  height: 650px;
+  overflow: hidden;
+  background: url(../images/bg-hero3.png) no-repeat center center;
+  background-size: cover;
+  background-attachment: fixed;
+}
+
+.Main .TopHead__layer {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.Main .TopHead__layer1 {
+  padding-top: 80px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  background: url(../images/bg-hero1.png) no-repeat center center;
+  z-index: 200;
+}
+
+.Main .TopHead__body {
+  max-width: 530px;
+  border-radius: 10px;
+  padding: 43px 40px 19px;
+  text-align: center;
+  background-color: white;
+}
+
+.Main .TopHead__body p {
+  margin: 1.3em 0 .5em;
+  font-weight: 700;
+}
+
+.Main .TopHead__title {
+  margin: 0 0 5;
+}
+
+.Main .TopHead__title img {
+  width: 280px;
+  inline-size: auto;
+}
+
+.Main .TopHead__title p a {
+  padding: 24px 37px;
+  font-size: 1.8rem;
+}
+
+.Main .TopHead__layer2 {
+  background: url(../images/bg-hero2.png) no-repeat center center;
+  z-index: 100;
+  height: 650px;
+}
+/*# sourceMappingURL=style.css.map */

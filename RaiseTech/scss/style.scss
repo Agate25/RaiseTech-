@@ -1,0 +1,26 @@
+@charset "UTF-8";
+@import url(http://fonts.googleapis.com/earlyaccess/notosansjapanese.css);
+* {
+    list-style-type: none;
+    text-decoration: none;
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+
+    // font-family: ;
+    
+}
+
+html {
+    font-size: 62.5%;
+}
+
+body {
+    font-family: "Noto Sans JP",MyYuGothicM,YuGothic,-apple-system,BlinkMacSystemFont,"Hiragino kaku Gothic ProN",Meiryo,Verdana,arial,helvetica,sans-serif;
+    line-height: 1.7;
+    font-size: 1.6rem;
+    color: #121212;
+}
+@import "_Header.scss";
+
+@import "_Main.scss";
