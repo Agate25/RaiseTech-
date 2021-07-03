@@ -1,13 +1,20 @@
 .Main {
-    padding-block-start: 70px;
-    .TopHead {
-        position: relative;
-        height: 650px;
-        overflow: hidden;
-        background: url(../images/bg-hero3.png) no-repeat center center;
-        background-size: cover;
-        background-attachment: fixed;
 
+    & {
+        padding-block-start: 70px;
+    }
+    
+    .TopHead {
+
+        & {
+            position: relative;
+            height: 650px;
+            overflow: hidden;
+            background: url(../images/bg-hero3.png) no-repeat center center;
+            background-size: cover;
+            background-attachment: fixed;
+        }
+        
         &__layer {
             position: absolute;
             top: 0;
@@ -36,15 +43,31 @@
                 font-weight: 700;
                 // font-size: 1.6rem;
             }
+
+            .Btn {
+                
+                a {
+                    color: white;
+                    display: inline-block;  
+                    padding: 17px 37px;
+                    background-color: #2498b3;
+                    border-radius: 4px;
+                    font-weight: 700;
+                    font-size: 1.8rem;
+                    border: solid 1px #c3c3c3;
+                }
+                
+            }
         }
 
         &__title {
-            margin: 0 0 5;
-            
-            img {
+            margin-top: 0;
+            margin-bottom: .5rem;
+
+            @at-root img {
                 width: 280px;
-                inline-size: auto;
-            }
+                block-size: auto;
+            }  
 
             p {
                 a {

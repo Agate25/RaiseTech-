@@ -6,7 +6,7 @@
     background: #fff;
     align-content: center;   
     align-items: center;
-    z-index: 1000;
+    z-index: 1100;
     position: fixed;
     top: 0;
     left: 0;
@@ -48,14 +48,15 @@
 
     &__link {
         font-weight: 700;
-        .menu {
-            margin: 0 auto;
+
+        .nav {
+            margin: 0 ;
             block-size: 70px;
-            display: flex;
-            
+            display: flex; 
             li {
                 list-style: none;
                 position: relative;
+                white-space: nowrap;
                 a {
                     block-size: 70px;
                     line-height: 70px;
@@ -64,18 +65,13 @@
                     text-align: center;
                     color: rgb(19, 29, 52);
                     display: block;
-
+            
                     &:hover {
                         color: #131d34;
                         background-color: #d4f1f8;
                     }
                 }
-                li {
-                    height: 0;
-                    overflow: hidden;
-                    transition: 0.3s;
-                    
-                }
+                
                 &:hover {
                     > ul {
                         > li {
@@ -85,32 +81,52 @@
                         }
                     }
                 }
-                .sub-menu {
-                    left: 0%;
-                    position: absolute;
-                    z-index: 1000;
-                    white-space: nowrap;
-                    li {
-                        text-align: left;
-                        display: flex;
+                
+            }
+
+            .sub-menu {
+                left: 0%;
+                position: absolute;
+                z-index: 1000;
+                
+                
+                li {
+                    text-align: left;  
+                    // font-size: 1.6rem;
+                    font-weight: 400;
+                    background-color: #e9f8fb;
+                    height: 0;
+                    overflow: hidden;
+                    transition: .3s;
+                    
+                
+                    a {
+                        padding: 15px 60px 15px 15px;
                         font-size: 1.6rem;
-                        font-weight: 400;
-                        background-color: #e9f8fb;
-                        a {
-                            padding: 15 60 15 15px;
-                            font-size: 1.6rem;
-                            // color: rgb(19, 29, 52);
+                        &:hover {
+                            color: #2498b3;
+                            background-color: #fff;
                         }
                     }
                 }
-            }    
-            
+            }
+
             .menu-item {
                 a {
                     color: #fff;
                     background-color: #2498b3;
-                }        
+                    &:hover {
+                        color: #fff;
+                        background-color: #2498b3;
+                    }
+                }      
             }
-        }
+        }      
     }
 }
+
+
+
+
+
+
