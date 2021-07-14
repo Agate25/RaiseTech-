@@ -1,0 +1,64 @@
+.Sec {
+    padding: 4em 0;
+    height: 230px;
+    background-color: black;
+    z-index: 500;
+    .Wrap {
+        max-width: 1078px;
+        margin: 0 auto;
+        .Recommendation {
+            position: relative;
+            margin: -263px 0;
+            justify-content: center;
+            color: #fff;
+            z-index: 1000;
+            display: flex;
+
+            &__entry {
+                margin: 0 50px;
+                width: 229px;
+            }
+
+            &__title {
+                text-align: center;
+                margin: .2em 0 0;
+                font-weight: 700;
+                font-size: 24px;
+                font-size: 2.4rem;
+                color: #fff;
+            }
+
+            &__icon {
+                align-items: center;
+                width: 230px;
+                height: 230px;
+                margin: 0 auto;
+                border: solid 6px #000;
+                border-radius: 50%;
+                background: #fff;
+                font-size: 100px;
+                justify-content: center;
+                display: flex;
+
+                i {
+                    font-family: "Font Awesome 5 free";
+                    display: inline-block;
+                    color: #000;
+                    font-style: normal;
+                    font-variant: normal;
+                    text-rendering: auto;
+                    line-height: 1;
+                }
+            }
+
+            &__body {
+                
+                p {
+                    margin: .5em 0 0;
+                    line-height: 1.7;
+                    font-weight: 700;
+                }
+            }
+        }
+    }
+}

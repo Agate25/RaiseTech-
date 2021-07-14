@@ -1,9 +1,9 @@
 @charset "UTF-8";
-*,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box}
+*,*:before,*:after{-webkit-box-sizing:border-box;box-sizing:border-box;}
 * {
     list-style-type: none;
     text-decoration: none;
-    box-sizing: border-box;
+    // box-sizing: border-box;
     padding: 0;
     margin: 0;    
 }
@@ -19,5 +19,5 @@ body {
     color: #121212;
 }
 @import "_Header.scss";
-
 @import "_Main.scss";
+@import "_Sec.scss";
