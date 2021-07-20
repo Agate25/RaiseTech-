@@ -1,0 +1,61 @@
+#hamburger {
+    display: flex;
+    position: absolute;
+    width: 50px;
+    height: 50px;
+    cursor: pointer;
+    background: white;
+
+    justify-content: center;
+    align-items: center;
+
+    &.active {
+        span {
+            visibility: hidden;
+
+            &::before,
+            &::after {
+                top: 0;
+                visibility: visible;
+            }
+
+            &::before {
+                transform: rotate(-45deg);
+            }
+
+            &::after {
+                transform: rotate(-135deg);
+            }
+        }
+    }
+
+    span {
+        width: 23px;
+        height: 2px;
+        background: #2498b3;
+        position: relative;
+    
+        &::before,
+        &::after {
+            content: "";
+            position: absolute;
+            width: 23px;
+            height: 2px;
+            background: #2498b3;
+            left: 0;
+            top: 24px;
+            transition: .3s;
+        }
+    
+        &::before {
+            top: -8px;
+        }
+    
+        &::after {
+            top: 8px;
+        }
+    }
+}
+
+
+

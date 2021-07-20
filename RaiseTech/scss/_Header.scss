@@ -1,6 +1,5 @@
 .Header {
     inline-size: 100%;
-    // block-size: 70px;
     display: flex;
     justify-content: space-between;
     background: #fff;
@@ -10,6 +9,10 @@
     position: fixed;
     top: 0;
     left: 0;
+
+    @include mq(lg) {
+        block-size: 50px;
+    }
 
     &__title {
         margin-inline-start: 21px;
@@ -26,19 +29,27 @@
                 display: flex;
                 line-height: 1.3;
                 font-weight: 900;
-                // block-size: 70px;
                 align-items: center;
                 color: rgb(19, 29, 52);
                 img {
                     block-size: 33px;
-                    inline-size: auto;       
+                    inline-size: auto; 
+
+                    @include mq(lg) {
+                        block-size: 30px;
+                    }      
                 }
             }
+
             span {
                 white-space: nowrap;
                 margin-inline-start: 16px;
                 font-size: 1.4rem;
                 
+                @include mq(xl) {
+                    display: none;
+                }
+
                 b{
                     font-size: 1.8rem;
                 }
@@ -49,14 +60,27 @@
     &__link {
         font-weight: 700;
 
+        @include mq(lg) {
+            display: none
+        }
+
         .nav {
-            margin: 0 ;
-            block-size: 70px;
+            margin: 0 auto;
             display: flex; 
             li {
                 list-style: none;
                 position: relative;
                 white-space: nowrap;
+
+                &:hover {
+                    > ul {
+                        > li {
+                            overflow: visible;
+                            height: 57px;
+                        }
+                    }
+                }
+                
                 a {
                     block-size: 70px;
                     line-height: 70px;
@@ -70,47 +94,31 @@
                         color: #131d34;
                         background-color: #d4f1f8;
                     }
-                }
-                
-                &:hover {
-                    > ul {
-                        > li {
-                            height: 70px;
-                            overflow: visible;
-                            // width: 100%;
-                        }
-                    }
-                }
-                
+                } 
             }
 
             .sub-menu {
-                left: 0%;
                 position: absolute;
-                z-index: 1000;
-                
-                
                 li {
-                    text-align: left;  
-                    // font-size: 1.6rem;
-                    font-weight: 400;
-                    background-color: #e9f8fb;
                     height: 0;
                     overflow: hidden;
-                    transition: .3s;
+                    background-color: #e9f8fb;
+                    font-weight: 400;
+                    transition: .2s;
                     
-                
                     a {
                         padding: 15px 60px 15px 15px;
-                        font-size: 1.6rem;
+                        height: auto;
+                        line-height: 27px;
+                        display: flex;
                         &:hover {
-                            color: #2498b3;
                             background-color: #fff;
+                            color: #2498b3;
                         }
                     }
                 }
             }
-
+            
             .menu-item {
                 a {
                     color: #fff;
@@ -123,6 +131,7 @@
             }
         }      
     }
+    
 }
 
 

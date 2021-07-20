@@ -3,10 +3,11 @@
     <head>
         <meta charset="UTF-8">
         <title>RaiseTesh</title>
+        <meta name="viewport" content="width=360,initial-scale=1">
         <link rel="stylesheet" href="https://unpkg.com/ress/dist/ress.min.css">
-        <link rel="stylesheet" href="./css/style.css">
         <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@100;300;400;500;700;900&display=swap" rel="stylesheet">
         <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.3/css/all.css" integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk" crossorigin="anonymous">
+        <link rel="stylesheet" href="./css/style.css">
         
     </head>
 
@@ -26,9 +27,9 @@
             </div>
 
             <div class="Header__link">
+                <nav id="nav">
                 <ul class="nav">
-                    <li>
-                        <a href="">はじめての方へ</a>
+                    <li><a href="">はじめての方へ</a>
                         <ul class="sub-menu">
                             <li><a href="">マンガでわかるRaiseTech</a></li>
                             <li><a href="">サポート体制</a></li>
@@ -36,10 +37,8 @@
                             <li><a href="">就職・転職支援制度</a></li>
                             <li><a href="">ご利用の流れ</a></li>
                         </ul>
-                        
                     </li>
-                    <li>
-                        <a>コース案内</a>
+                    <li><a>コース案内</a>
                         <ul class="sub-menu">
                             <li><a href="">マーケティングコース</a></li>
                             <li><a href="">デザインコース</a></li>
@@ -51,22 +50,19 @@
                         </ul>
                     </li>
                     <li><a href="">講師紹介</a></li>
-                    <li>
-                        <a>卒業生の声・実績</a>
+                    <li><a>卒業生の声・実績</a>
                         <ul class="sub-menu">
                             <li><a href="">卒業生の声</a></li>
                             <li><a href="">転職・案件実績</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a>メディア</a>
+                    <li><a>メディア</a>
                         <ul class="sub-menu">
                             <li><a href="">動画一覧</a></li>
                             <li><a href="">掲載記事一覧</a></li>
                         </ul>
                     </li>
-                    <li>
-                        <a href="">サポート</a>
+                    <li><a href="">サポート</a>
                         <ul class="sub-menu">
                             <li><a href="">よくあるご質問</a></li>
                             <li><a href="">お問い合わせ</a></li>
@@ -74,7 +70,11 @@
                     </li>
                     <li class="menu-item"><a href="">受講お申し込み</a></li>
                 </ul>
-            </div>
+                </nav>
+                <div id="hamburger">
+                    <span></span>
+                </div>
+            </div> 
         </header>
 
         <main class="Main">
@@ -99,41 +99,32 @@
                 <div class="TopHead__layer TopHead__layer2"></div>
             </div>
 
-            <div class="Sec">
+            <div class="Bottom">
                 <div class="Wrap">
                     <div class="Recommendation">
+
                         <div class="Recommendation__entry">
-                            <div class="Recommendation__title">
-                                <p class="Recommendation__icon">
-                                    <i class="fas fa-dumbbell fa-fw"></i>
-                                </p>
-                                <p>現場主義</p>
+                            <div class="Recommendation__icon">
+                                <i class="fas fa-dumbbell"></i>
                             </div>
-                            <div class="Recommendation__body">
-                                <p>「プログラム」だけでは稼げない！ 現場で求められる「技術」のみ教えます。</p>
-                            </div>
+                            <p class="Recommendation__title">現場主義</p>
+                            <p class="Recommendation__text">「プログラム」だけでは稼げない！ 現場で求められる「技術」のみ教えます。</p>    
                         </div>
+
                         <div class="Recommendation__entry">
-                            <div class="Recommendation__title">
-                                <p class="Recommendation__icon">
-                                    <i class="fas fa-chart-line fa-fw"></i>
-                                </p>
-                                <p>現役講師</p>
+                            <div class="Recommendation__icon">
+                                <i class="fas fa-chart-line"></i>
                             </div>
-                            <div class="Recommendation__body">
-                                <p>「今、求められている技術」をリアルタイムに教えてくれる、現役の技術者だけが講師です。</p>
-                            </div>
+                            <p class="Recommendation__title">現役講師</p>
+                            <p class="Recommendation__text">「今、求められている技術」をリアルタイムに教えてくれる、現役の技術者だけが講師です。</p>
                         </div>
+
                         <div class="Recommendation__entry">
-                            <div class="Recommendation__title">
-                                <p class="Recommendation__icon">
-                                    <i class="far fa-life-ring fa-fw"></i>
-                                </p>
-                                <p>徹底サポート</p>
+                            <div class="Recommendation__icon">
+                                <i class="far fa-life-ring"></i>
                             </div>
-                            <div class="Recommendation__body">
-                                <p>期間中の質疑応答無制限！ 個別進捗管理！ 挫折させないサポートを徹底します。</p>
-                            </div>
+                            <p class="Recommendation__title">徹底サポート</p>
+                            <p class="Recommendation__text">期間中の質疑応答無制限！ 個別進捗管理！ 挫折させないサポートを徹底します。</p>
                         </div>
                     </div>
                 </div>
