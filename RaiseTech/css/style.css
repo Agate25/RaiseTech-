@@ -185,66 +185,13 @@ body {
 }
 
 #hamburger {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: block;
   position: absolute;
   width: 50px;
   height: 50px;
   cursor: pointer;
-  background: white;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-}
-
-#hamburger.active span {
-  visibility: hidden;
-}
-
-#hamburger.active span::before, #hamburger.active span::after {
-  top: 0;
-  visibility: visible;
-}
-
-#hamburger.active span::before {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-}
-
-#hamburger.active span::after {
-  -webkit-transform: rotate(-135deg);
-          transform: rotate(-135deg);
-}
-
-#hamburger span {
-  width: 23px;
-  height: 2px;
-  background: #2498b3;
-  position: relative;
-}
-
-#hamburger span::before, #hamburger span::after {
-  content: "";
-  position: absolute;
-  width: 23px;
-  height: 2px;
-  background: #2498b3;
-  left: 0;
-  top: 24px;
   -webkit-transition: .3s;
   transition: .3s;
-}
-
-#hamburger span::before {
-  top: -8px;
-}
-
-#hamburger span::after {
-  top: 8px;
 }
 
 .Main {
