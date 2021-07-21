@@ -59,14 +59,14 @@
 
     &__link {
         font-weight: 700;
-
-        @include mq(lg) {
-            display: none
-        }
-
-        .nav {
+        .nav__body {
             margin: 0 auto;
             display: flex; 
+
+            @include mq(lg) {
+                display: none;
+            }
+
             li {
                 list-style: none;
                 position: relative;
@@ -89,6 +89,12 @@
                     text-align: center;
                     color: rgb(19, 29, 52);
                     display: block;
+
+                    @include mq(lg) {
+                        block-size: auto;
+                        padding: 10px;
+                        display: flex;
+                    }
             
                     &:hover {
                         color: #131d34;
@@ -134,7 +140,37 @@
     
 }
 
+@include mq(lg) {
+    #nav {
+        position: absolute;
+        top: 50px;
+        left: 0;
+        right: 0;
+        z-index: 999;
+        background-color: #fff;
+        display: none;
+        .nav-body {
+            flex-direction: column;
+            margin: 0;
+            padding: 0;
+            list-style: none;
+            display: flex;        
+            li {
+                @include mq(lg) {
+                    position: relative;
+                    white-space: nowrap;    
+                }
+                
+            }
+        }
+    }
+}
 
+@include mq(lg) {
+    #nav.in-open {
+        display: block;
+    }
+}
 
 
 

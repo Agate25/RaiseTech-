@@ -1,72 +1,60 @@
-#hamburger {
-    display: block;
-    position: absolute;
-    // top: 20px;
-    // left: 30px;
+$btnWidth: 23px;
+$btnHeight: 2px;
+
+.p-hamburger {
     width: 50px;
     height: 50px;
-    cursor:pointer;
-    transition: .3s;
+    background-color: white;
+    position: relative;
+    display: none;
+    @include mq(lg) {
+        display: block;
+    }
+    &::before,
+    &::after {
+        content: "";
+        width: $btnWidth;
+        height: $btnHeight;
+        background: #2498b3;
+        position: absolute;
+        left: calc( 50% - ( #{$btnWidth} / 2 ) );
+        display: block;
+        transition: transform .2s;
+    }
+    &::before {
+        top: 16px;
+    }
+    &::after {
+        top: 34px;
+    }
+    > span {
+        width: $btnWidth;
+        height: $btnHeight;
+        background: #2498b3;
+        background-size: auto $btnHeight;
+        position: absolute;
+        left: calc( 50% - ( #{$btnWidth} / 2 ) );
+        top: 50%;
+        transition: transform .2s;
+    }
+    &.is-open {
+        background-color: #2498b3;
+        &::before {
+            transform: rotate(-45deg);
+            background-color: white;
+            top: 25px;
+        }
+        &::after {
+            transform: rotate(-135deg);
+            background-color: white;
+            top:25px;
+        }
+        > span {
+            background: none;
+        }    
+    }
 }
 
-// .hamburger {
-//     display: flex;
-//     position: absolute;
-//     width: 50px;
-//     height: 50px;
-//     cursor: pointer;
-//     background: white;
-
-//     justify-content: center;
-//     align-items: center;
-
-//     &.active {
-//         span {
-//             visibility: hidden;
-
-//             &::before,
-//             &::after {
-//                 top: 0;
-//                 visibility: visible;
-//             }
-
-//             &::before {
-//                 transform: rotate(-45deg);
-//             }
-
-//             &::after {
-//                 transform: rotate(-135deg);
-//             }
-//         }
-//     }
-
-//     span {
-//         width: 23px;
-//         height: 2px;
-//         background: #2498b3;
-//         position: relative;
-    
-//         &::before,
-//         &::after {
-//             content: "";
-//             position: absolute;
-//             width: 23px;
-//             height: 2px;
-//             background: #2498b3;
-//             left: 0;
-//             top: 24px;
-//             transition: .3s;
-//         }
-    
-//         &::before {
-//             top: -8px;
-//         }
-    
-//         &::after {
-//             top: 8px;
-//         }
-//     }
-// }
-
-
-
+body.is-open {
+    position: fixed;
+}
