@@ -1,9 +1,14 @@
-var hamburger = document.querySelector(".js-hamburger");
+const hamburger = document.querySelector(".js-hamburger");
+const nav = document.getElementById("nav");
 hamburger.addEventListener("click", function() {
-  hamburger.classList.toggle("is-open");
+  hamburger.classList.toggle("is-active");
+  nav.classList.toggle("is-open");
+  // if(nav.classList.contains("is-open")){
+  //   nav.classList.remove("is-open");
+  // } else {
+  //   nav.classList.add("is-open");
+  // }
 });
-
-const menu = document.querySelector(".")
 
 
 

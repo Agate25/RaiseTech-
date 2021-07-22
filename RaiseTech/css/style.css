@@ -54,6 +54,12 @@ body {
   inline-size: 160px;
 }
 
+@media screen and (max-width: 1200px) {
+  .Header__title {
+    margin: 10px;
+  }
+}
+
 .Header__title p {
   -webkit-margin-before: 0px;
           margin-block-start: 0px;
@@ -108,31 +114,31 @@ body {
   font-weight: 700;
 }
 
-.Header__link .nav__body {
+@media screen and (max-width: 1200px) {
+  .Header__link #nav {
+    display: none;
+  }
+}
+
+.Header__link #nav .nav__body {
   margin: 0 auto;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
 }
 
-@media screen and (max-width: 1200px) {
-  .Header__link .nav__body {
-    display: none;
-  }
-}
-
-.Header__link .nav__body li {
+.Header__link #nav .nav__body li {
   list-style: none;
   position: relative;
   white-space: nowrap;
 }
 
-.Header__link .nav__body li:hover > ul > li {
+.Header__link #nav .nav__body li:hover > ul > li {
   overflow: visible;
-  height: 57px;
+  height: auto;
 }
 
-.Header__link .nav__body li a {
+.Header__link #nav .nav__body li a {
   block-size: 70px;
   line-height: 70px;
   padding: 0 15px;
@@ -142,26 +148,22 @@ body {
   display: block;
 }
 
-@media screen and (max-width: 1200px) {
-  .Header__link .nav__body li a {
-    block-size: auto;
-    padding: 10px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-  }
-}
-
-.Header__link .nav__body li a:hover {
+.Header__link #nav .nav__body li a:hover {
   color: #131d34;
   background-color: #d4f1f8;
 }
 
-.Header__link .nav__body .sub-menu {
+.Header__link #nav .nav__body .sub-menu {
   position: absolute;
 }
 
-.Header__link .nav__body .sub-menu li {
+@media screen and (max-width: 1200px) {
+  .Header__link #nav .nav__body .sub-menu {
+    display: none;
+  }
+}
+
+.Header__link #nav .nav__body .sub-menu li {
   height: 0;
   overflow: hidden;
   background-color: #e9f8fb;
@@ -170,7 +172,7 @@ body {
   transition: .2s;
 }
 
-.Header__link .nav__body .sub-menu li a {
+.Header__link #nav .nav__body .sub-menu li a {
   padding: 15px 60px 15px 15px;
   height: auto;
   line-height: 27px;
@@ -179,55 +181,142 @@ body {
   display: flex;
 }
 
-.Header__link .nav__body .sub-menu li a:hover {
+.Header__link #nav .nav__body .sub-menu li a:hover {
   background-color: #fff;
   color: #2498b3;
 }
 
-.Header__link .nav__body .menu-item a {
+@media screen and (max-width: 1200px) {
+  .Header__link #nav .nav__body .menu-item {
+    display: none;
+  }
+}
+
+.Header__link #nav .nav__body .menu-item a {
   color: #fff;
   background-color: #2498b3;
 }
 
-.Header__link .nav__body .menu-item a:hover {
+.Header__link #nav .nav__body .menu-item a:hover {
   color: #fff;
   background-color: #2498b3;
 }
 
 @media screen and (max-width: 1200px) {
-  #nav {
+  .Header__link #nav.is-open {
     position: absolute;
     top: 50px;
     left: 0;
     right: 0;
     z-index: 999;
     background-color: #fff;
-    display: none;
+    display: block;
+    -webkit-transition: all .5s;
+    transition: all .5s;
   }
-  #nav .nav-body {
+  .Header__link #nav.is-open .nav__body {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
         -ms-flex-direction: column;
             flex-direction: column;
-    margin: 0;
-    padding: 0;
+    width: 100%;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .Header__link #nav.is-open .nav__body li {
+    position: relative;
+    white-space: nowrap;
     list-style: none;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .Header__link #nav.is-open .nav__body li a {
+    margin-top: 0;
+    padding: 10px;
+    height: auto;
+    line-height: 27px;
+    position: relative;
+    background: #fff;
+    color: #131d34;
+    text-align: left;
+    vertical-align: middle;
+    overflow: hidden;
+  }
+  .Header__link #nav.is-open .nav__body li a:hover {
+    background-color: #f3fafb;
+  }
+  .Header__link #nav.is-open .nav__body li ul {
+    width: 100%;
+    position: static;
+    display: table;
+    top: 70px;
+    left: 0;
+    z-index: 1000;
+    height: 0;
+    background-color: #fff;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  > .Header__link #nav.is-open .nav__body li:hover > ul > li {
+    overflow: visible;
+    height: auto;
+  }
+  .Header__link #nav.is-open .nav__body li:hover > a::after {
+    display: none;
+  }
+  .Header__link #nav.is-open .nav__body .menu > a::before {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 13px;
+    width: 24px;
+    height: 2px;
+    margin-top: -1px;
+    background-color: #121212;
+    z-index: 9;
+  }
+  .Header__link #nav.is-open .nav__body .menu > a::after {
+    display: block;
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 24px;
+    width: 2px;
+    height: 24px;
+    margin-top: -12px;
+    background-color: #121212;
+  }
+  .Header__link #nav.is-open .nav__body .menu:nth-of-type(3) a::before, .Header__link #nav.is-open .nav__body .menu:nth-of-type(3) a::after {
+    display: none;
+  }
+  .Header__link #nav.is-open .sub-menu {
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .Header__link #nav.is-open .sub-menu li {
+    width: 100%;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    overflow: hidden;
+    -webkit-transition: all .5s;
+    transition: all .5s;
+  }
+  .Header__link #nav.is-open .sub-menu li a {
+    padding: 10px 10px 10px 25px;
+    position: relative;
+    height: auto;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
   }
-}
-
-@media screen and (max-width: 1200px) and (max-width: 1200px) {
-  #nav .nav-body li {
-    position: relative;
-    white-space: nowrap;
-  }
-}
-
-@media screen and (max-width: 1200px) {
-  #nav.in-open {
-    display: block;
+  .Header__link #nav.is-open .sub-menu li a:hover {
+    color: #121212;
+    background-color: #f3fafb;
   }
 }
 
@@ -281,29 +370,29 @@ body {
   transition: transform .2s, -webkit-transform .2s;
 }
 
-.p-hamburger.is-open {
+.p-hamburger.is-active {
   background-color: #2498b3;
 }
 
-.p-hamburger.is-open::before {
+.p-hamburger.is-active::before {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
   background-color: white;
   top: 25px;
 }
 
-.p-hamburger.is-open::after {
+.p-hamburger.is-active::after {
   -webkit-transform: rotate(-135deg);
           transform: rotate(-135deg);
   background-color: white;
   top: 25px;
 }
 
-.p-hamburger.is-open > span {
+.p-hamburger.is-active > span {
   background: none;
 }
 
-body.is-open {
+body.is-active {
   position: fixed;
 }
 
